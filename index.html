@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SudoMate</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>Sudoku Solver</h1>
+    <button id="themeToggle">Toggle Theme</button>
+  </div>
+
+  <div id="board"></div>
+
+  <div class="buttons">
+    <button onclick="solve()">Solve</button>
+    <button onclick="clearBoard()">Clear</button>
+    <button onclick="loadExample('easy')">Easy</button>
+    <button onclick="loadExample('medium')">Medium</button>
+    <button onclick="loadExample('hard')">Hard</button>
+  </div>
+
+  <div id="spinner" class="hidden">Solving...</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

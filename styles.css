@@ -1,0 +1,130 @@
+/* Cozy Theme with Dark Mode */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 30px;
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #f4f1ee;
+  --text: #333;
+  --board-bg: #e0dcd6;
+  --input-bg: #fff;
+  --input-focus: #fdf7f0;
+  --button-bg: #d4a373;
+  --button-hover: #c48f61;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #eee;
+  --board-bg: #2e2e2e;
+  --input-bg: #444;
+  --input-focus: #333;
+  --button-bg: #946c3f;
+  --button-hover: #7c5730;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  color: var(--text);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(9, 45px);
+  grid-template-rows: repeat(9, 45px);
+  gap: 4px;
+  justify-content: center;
+  margin: 0 auto 30px;
+  background-color: var(--board-bg);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+input {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease-in-out;
+  color: var(--text);
+}
+
+input:focus {
+  outline: none;
+  background-color: var(--input-focus);
+  box-shadow: 0 0 0 2px var(--button-bg);
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-1px);
+}
+
+#spinner {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--button-bg);
+  display: none;
+}
+
+#spinner.show {
+  display: block;
+}
+
+@media (max-width: 500px) {
+  #board {
+    transform: scale(0.85);
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+.highlight {
+  background-color: #ffeaa7 !important;
+  transition: background-color 0.2s ease;
+}
+
